@@ -1,1 +1,51 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <title>Notes - Riku Fushimi</title>
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    body { font-family: sans-serif; color: #333; }
+    nav {
+      background: #222; padding: 15px 40px;
+      display: flex; gap: 30px; align-items: center;
+    }
+    nav a { color: white; text-decoration: none; font-size: 16px; }
+    nav a:hover { color: #aaa; }
+    nav .name { font-weight: bold; margin-right: auto; }
+    main { max-width: 750px; margin: 50px auto; padding: 0 20px; }
+    h1 { font-size: 2em; margin-bottom: 15px; }
+    .note {
+      margin-bottom: 20px;
+      padding-bottom: 20px;
+      border-bottom: 1px solid #eee;
+      line-height: 1.8;
+    }
+    .note-title {
+      font-weight: bold;
+      color: #8B0000;
+      text-decoration: none;
+      font-size: 1.05em;
+    }
+    .note-title:hover { text-decoration: underline; }
+    .note-info { color: #666; font-size: 0.9em; margin-top: 4px; }
+  </style>
+</head>
+<body>
+  <nav>
+    <a class="name" href="index.html">Riku Fushimi</a>
+    <a href="papers.html">Papers</a>
+    <a href="talks.html">Talks</a>
+    <a href="notes.html">Notes</a>
+  </nav>
+  <main>
+    <h1>Notes</h1>
 
+    <div class="note">
+      <a class="note-title" href="#">ノートのタイトルをここに書く</a>
+      <p class="note-info">2025年〇月</p>
+    </div>
+
+  </main>
+</body>
+</html>
