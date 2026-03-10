@@ -4,16 +4,43 @@
     <meta charset="UTF-8">
     <title>Riku Fushimi</title>
     <style>
-      body { font-family: sans-serif; max-width: 700px; margin: 50px auto; 
-      h1 { border-bottom: 2px solid #333; }
+      * { margin: 0; padding: 0; box-sizing: border-box; }
+      body { font-family: sans-serif; color: #333; }
+      nav {
+        background: #222;
+        padding: 15px 40px;
+        display: flex;
+        gap: 30px;
+        align-items: center;
+      }
+      nav a {
+        color: white;
+        text-decoration: none;
+        font-size: 16px;
+      }
+      nav a:hover { color: #aaa; }
+      nav .name { font-weight: bold; margin-right: auto; }
+      main { max-width: 750px; margin: 50px auto; padding: 0 20px; }
+      h1 { font-size: 2em; margin-bottom: 10px; }
+      h2 { margin-top: 40px; margin-bottom: 10px; border-bottom: 1px solid #ccc; padding-bottom: 5px; }
+      p { line-height: 1.8; margin-bottom: 10px; }
+      a { color: #0066cc; }
     </style>
   </head>
   <body>
-    <h1>Riku Fushimi</h1>
-    <p>大学院生 / Graduate Student</p>
-    <h2>Research</h2>
-    <p>Representation theory</p>
-    <h2>Contact</h2>
-    <p>GitHub: <a href="https://github.com/RikuFushimi">RikuFushimi</a></p>
+    <nav>
+      <a class="name" href="index.html">Riku Fushimi</a>
+      <a href="papers.html">Papers</a>
+      <a href="talks.html">Talks</a>
+      <a href="notes.html">Notes</a>
+    </nav>
+    <main>
+      <h1>Riku Fushimi</h1>
+      <p>大学院生 / Graduate Student</p>
+      <h2>Research</h2>
+      <p>Representation theory of algebras, quasi-hereditary algebras</p>
+      <h2>Contact</h2>
+      <p>GitHub: <a href="https://github.com/RikuFushimi">RikuFushimi</a></p>
+    </main>
   </body>
 </html>
