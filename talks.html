@@ -7,7 +7,6 @@
     window.dataLayer = window.dataLayer || [];
     function gtag(){dataLayer.push(arguments);}
     gtag('js', new Date());
-  
     gtag('config', 'G-YG20MDP7N6');
   </script>
   <meta charset="UTF-8">
@@ -15,63 +14,71 @@
   <title>Talks - Riku Fushimi</title>
   <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;700&display=swap" rel="stylesheet">
   <style>
-      * { margin: 0; padding: 0; box-sizing: border-box; }
-      body { font-family: 'Nunito', sans-serif; font-size: 20px; color: #333; }
-      nav {
-        background: #fff;
-        padding: 20px 40px;
-        display: flex;
-        gap: 45px;
-        align-items: center;
-        border-bottom: 2px solid black;
-      }
-    
-      nav {
-        background: #fff;
-        padding: 20px 40px; 
-        display: flex;
-        gap: 45px;
-        align-items: center;
-        border-bottom: 2px solid black;
-      }
-      nav a {
-  color: #c86010; 
-  text-decoration: none;
-  font-size: 30px;
-  padding: 1px 7px;
-  border: 1.5px solid #8B0000;
-  border-radius: 4px;
-  font-weight: bold;
-  transition: all 0.15s ease;
-  vertical-align: middle;
-  background: transparent;
-}
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    body { font-family: 'Nunito', sans-serif; font-size: 20px; color: #333; }
 
-nav a:hover {
-  background: #8B0000;
-  color: white;
-}
-    
-     nav .name {
-  font-weight: bold;
-  margin-right: auto;
-  color: #333;
-  background: #f5c99a;
-  padding: 4px 14px;
-  border-radius: 10px;
-  cursor: pointer;
-  text-decoration: none;
-  font-size: 30px;
-  transition: all 0.1s ease;
-}
+    nav {
+      background: #fff;
+      padding: 20px 40px;
+      display: flex;
+      gap: 45px;
+      align-items: center;
+      border-bottom: 2px solid black;
+    }
 
-nav .name:hover {
-  background: #f0bb85;
-  color: #333;
-}
-      main { max-width: 100%; margin: 50px 0; padding: 0 40px; }
+    nav a {
+      color: #c86010;
+      text-decoration: none;
+      font-size: 30px;
+      padding: 1px 7px;
+      border: 1.5px solid #c86010;
+      border-radius: 4px;
+      font-weight: bold;
+      transition: all 0.1s ease;
+      vertical-align: middle;
+      background: transparent;
+      position: relative;
+      top: 0;
+    }
+
+    nav a:hover {
+      background: #c86010;
+      color: white;
+    }
+
+    nav a:active {
+      top: 3px;
+    }
+
+    nav .name {
+      font-weight: bold;
+      margin-right: auto;
+      color: #333;
+      background: #fde8cc;
+      padding: 4px 14px;
+      border-radius: 10px;
+      cursor: pointer;
+      text-decoration: none;
+      font-size: 30px;
+      border: none;
+      transition: all 0.1s ease;
+      position: relative;
+      top: 0;
+    }
+
+    nav .name:hover {
+      background: #f5c99a;
+      color: #333;
+    }
+
+    nav .name:active {
+      top: 3px;
+    }
+
+    main { max-width: 100%; margin: 50px 0; padding: 0 40px; }
     h1 { font-size: 2em; margin-bottom: 15px; }
     h2 { font-size: 1.5em; margin-top: 40px; margin-bottom: 20px; }
+
     .talk {
       margin-bottom: 25px;
       padding-bottom: 25px;
@@ -80,12 +87,16 @@ nav .name:hover {
     }
     .talk-title { font-weight: bold; font-size: 1.05em; }
     .talk-info { color: #666; font-size: 0.9em; margin-top: 4px; }
+
     @media (max-width: 600px) {
-  nav .name {
-    font-size: 16px;
-    padding: 2px 8px;
-  }
-}
+      body { font-size: 16px; }
+      nav { padding: 12px 20px; gap: 15px; }
+      nav a { font-size: 14px; }
+      nav .name { font-size: 14px; padding: 2px 8px; }
+      main { margin: 30px auto; padding: 0 15px; }
+      h1 { font-size: 1.6em; }
+      h2 { font-size: 1.2em; }
+    }
   </style>
 </head>
 <body>
@@ -98,7 +109,7 @@ nav .name:hover {
     <h1>Talks</h1>
 
     <div class="talk">
-      <p class="talk-title">The correspondence between silting objects and t-structures for non-positive dg　algebras</p>
+      <p class="talk-title">The correspondence between silting objects and t-structures for non-positive dg algebras</p>
       <p class="talk-info">Conference Talk, <a href="https://ring-theory-japan.com/ring/oldmeeting/2024/kan/56ringsymp.html">The 56th Symposium on Ring Theory and Representation Theory</a>, Tokyo Gakugei University</p>
     </div>
 
@@ -106,7 +117,6 @@ nav .name:hover {
       <p class="talk-title">Koszul dualities for dg algebras</p>
       <p class="talk-info">Seminar Talk, <a href="https://sites.google.com/view/math-graduate/MATHSCI-FRESHMAN-SEMINAR/2025/%E3%83%97%E3%83%AD%E3%82%B0%E3%83%A9%E3%83%A0%E5%8F%8A%E3%81%B3%E3%82%A2%E3%83%96%E3%82%B9%E3%83%88%E3%83%A9%E3%82%AF%E3%83%88?authuser=0">MATHSCI FRESHMAN SEMINAR 2025</a>, Nagoya University</p>
     </div>
-
 
     <div class="talk">
       <p class="talk-title">Non-positive dg algebras and positive dg algebras</p>
