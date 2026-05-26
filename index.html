@@ -29,31 +29,28 @@
       nav a { color: #ff0000; text-decoration: none; font-size: 30px; }
       nav a:hover { color: #aaa; }
       nav .name {
-        font-weight: bold;
-        margin-right: auto;
-        background: #a8c8e8;
-        box-shadow: 0 6px 0 #6a9bbf, 0 8px 10px rgba(0, 0, 0, 0.15);
-        color: #333; /* 文字を暗くすると読みやすい */
-        padding: 6px 16px;
-        border-radius: 10px;
-        cursor: pointer;
-        text-decoration: none;
-        
-        /* 3D シャドウ */
-        box-shadow: 0 6px 0 #000, 0 8px 10px rgba(0, 0, 0, 0.3);
-        transition: all 0.1s ease;
-        position: relative;
-        top: 0;
-      }
+  font-weight: bold;
+  margin-right: auto;
+  color: #333;             /* 文字を黒に */
+  background: #f5c99a;     /* 淡いオレンジ */
+  padding: 6px 16px;
+  border-radius: 10px;
+  cursor: pointer;
+  text-decoration: none;
+  box-shadow: 0 6px 0 #c8905a, 0 8px 10px rgba(0, 0, 0, 0.15);
+  transition: all 0.1s ease;
+  position: relative;
+  top: 0;
+}
 
 nav .name:hover {
-  background: #444;
-  color: white;
+  background: #f0bb85;
+  color: #333;
 }
 
 nav .name:active {
   top: 4px;
-  box-shadow: 0 2px 0 #000, 0 4px 6px rgba(0, 0, 0, 0.2);
+  box-shadow: 0 2px 0 #c8905a, 0 4px 6px rgba(0, 0, 0, 0.1);
 }
       main { max-width: 100%; margin: 50px 0; padding: 0 40px; }
       h1 { font-size: 3em; margin-bottom: 10px; }
