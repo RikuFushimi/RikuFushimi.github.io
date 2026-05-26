@@ -7,7 +7,6 @@
     window.dataLayer = window.dataLayer || [];
     function gtag(){dataLayer.push(arguments);}
     gtag('js', new Date());
-  
     gtag('config', 'G-YG20MDP7N6');
   </script>
   <meta charset="UTF-8">
@@ -15,63 +14,71 @@
   <title>Papers - Riku Fushimi</title>
   <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;700&display=swap" rel="stylesheet">
   <style>
-      * { margin: 0; padding: 0; box-sizing: border-box; }
-      body { font-family: 'Nunito', sans-serif; font-size: 20px; color: #333; }
-      nav {
-        background: #fff;
-        padding: 20px 40px;
-        display: flex;
-        gap: 45px;
-        align-items: center;
-        border-bottom: 2px solid black;
-      }
-      nav {
-        background: #fff;
-        padding: 20px 40px; 
-        display: flex;
-        gap: 45px;
-        align-items: center;
-        border-bottom: 2px solid black;
-      }
-    
-      nav a {
-  color: #c86010; 
-  text-decoration: none;
-  font-size: 30px;
-  padding: 1px 7px;
-  border: 1.5px solid #8B0000;
-  border-radius: 4px;
-  font-weight: bold;
-  transition: all 0.15s ease;
-  vertical-align: middle;
-  background: transparent;
-}
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    body { font-family: 'Nunito', sans-serif; font-size: 20px; color: #333; }
 
-nav a:hover {
-  background: #8B0000;
-  color: white;
-}
-    
-      nav .name {
-  font-weight: bold;
-  margin-right: auto;
-  color: #333;
-  background: #fde8cc;
-  padding: 4px 14px;
-  border-radius: 10px;
-  cursor: pointer;
-  text-decoration: none;
-  font-size: 30px;
-  transition: all 0.1s ease;
-}
+    nav {
+      background: #fff;
+      padding: 20px 40px;
+      display: flex;
+      gap: 45px;
+      align-items: center;
+      border-bottom: 2px solid black;
+    }
 
-nav .name:hover {
-  background: #f0bb85;
-  color: #333;
-}
-      main { max-width: 100%; margin: 50px 0; padding: 0 40px; }
+    nav a {
+      color: #c86010;
+      text-decoration: none;
+      font-size: 30px;
+      padding: 1px 7px;
+      border: 1.5px solid #c86010;
+      border-radius: 4px;
+      font-weight: bold;
+      transition: all 0.1s ease;
+      vertical-align: middle;
+      background: transparent;
+      position: relative;
+      top: 0;
+    }
+
+    nav a:hover {
+      background: #c86010;
+      color: white;
+    }
+
+    nav a:active {
+      top: 3px;
+    }
+
+    nav .name {
+      font-weight: bold;
+      margin-right: auto;
+      color: #333;
+      background: #fde8cc;
+      padding: 6px 22px;
+      border-radius: 10px;
+      cursor: pointer;
+      text-decoration: none;
+      font-size: 45px;
+      border: none;
+      transition: all 0.1s ease;
+      position: relative;
+      top: 0;
+    }
+
+    nav .name:hover {
+      background: #f5c99a;
+      color: #333;
+    }
+
+    nav .name:active {
+      top: 3px;
+    }
+
+    main { max-width: 100%; margin: 50px 0; padding: 0 40px; }
     h1 { font-size: 2em; margin-bottom: 15px; }
     h2 { font-size: 1.5em; margin-top: 40px; margin-bottom: 20px; }
+
     .paper {
       margin-bottom: 30px;
       padding-bottom: 30px;
@@ -80,28 +87,21 @@ nav .name:hover {
     .paper-title {
       font-size: 1.1em;
       font-weight: bold;
-      color: #8B0000;
+      color: #c86010;
       text-decoration: none;
     }
     .paper-title:hover { text-decoration: underline; }
     .paper-info { color: #666; font-size: 0.9em; margin-top: 5px; }
     .paper-desc { margin-top: 8px; line-height: 1.7; }
     .intro { margin-bottom: 20px; line-height: 1.8; }
-    @media (max-width: 600px) {
-      body { font-size: 16px; }
-      nav { padding: 12px 20px; gap: 15px; }
-      nav a { font-size: 14px; }
-      main { margin: 30px auto; padding: 0 15px; }
-      h1 { font-size: 1.6em; }
-      h2 { font-size: 1.2em; }
-    }
+
     .pdf-link {
       display: inline-block;
       margin-left: 8px;
       padding: 1px 7px;
       font-size: 0.85em;
-      color: #8B0000;
-      border: 1.5px solid #8B0000;
+      color: #c86010;
+      border: 1.5px solid #c86010;
       border-radius: 4px;
       text-decoration: none;
       font-weight: bold;
@@ -109,8 +109,18 @@ nav .name:hover {
       vertical-align: middle;
     }
     .pdf-link:hover {
-      background: #8B0000;
+      background: #c86010;
       color: white;
+    }
+
+    @media (max-width: 600px) {
+      body { font-size: 16px; }
+      nav { padding: 12px 20px; gap: 15px; }
+      nav a { font-size: 14px; }
+      nav .name { font-size: 21px; padding: 3px 12px; }
+      main { margin: 30px auto; padding: 0 15px; }
+      h1 { font-size: 1.6em; }
+      h2 { font-size: 1.2em; }
     }
   </style>
   <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
@@ -143,7 +153,7 @@ nav .name:hover {
       <p class="paper-info">arXiv preprint, 2024. Link: <a href="https://arxiv.org/abs/2409.08842">arXiv:2409.08842</a>
         <a class="pdf-link" href="https://arxiv.org/pdf/2409.08842" target="_blank">pdf</a>
       </p>
-      <p class="paper-desc">We studied enhanced triangulated category with an simple-minded collection.</p>
+      <p class="paper-desc">We studied enhanced triangulated category with a simple-minded collection.</p>
     </div>
 
     <div class="paper">
@@ -159,7 +169,7 @@ nav .name:hover {
       <p class="paper-info">arXiv preprint, 2026. Link: <a href="https://arxiv.org/abs/2605.23704">arXiv:2605.23704</a>
         <a class="pdf-link" href="https://arxiv.org/pdf/2605.23704" target="_blank">pdf</a>
       </p>
-      <p class="paper-desc">We classified silting-discrete graded path algebras.</p> 
+      <p class="paper-desc">We classified silting-discrete graded path algebras.</p>
     </div>
 
   </main>
