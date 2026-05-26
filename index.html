@@ -32,20 +32,27 @@
   font-weight: bold;
   margin-right: auto;
   color: white;
-  background-color: #333;
+  background: #222;
   padding: 6px 16px;
-  border-radius: 8px;
-  border-bottom: 4px solid #000;          /* 下に影をつけて立体感 */
-  text-shadow: 0 1px 2px rgba(0,0,0,0.4); /* 文字にも影 */
+  border-radius: 10px;
+  cursor: pointer;
+  text-decoration: none;
+  
+  /* 3D シャドウ */
+  box-shadow: 0 6px 0 #000, 0 8px 10px rgba(0, 0, 0, 0.3);
   transition: all 0.1s ease;
+  position: relative;
+  top: 0;
 }
+
 nav .name:hover {
-  background-color: #555;
+  background: #444;
   color: white;
 }
+
 nav .name:active {
-  border-bottom: 1px solid #000;   /* 押したとき影が縮む */
-  transform: translateY(3px);      /* 押し込まれる動き */
+  top: 4px;
+  box-shadow: 0 2px 0 #000, 0 4px 6px rgba(0, 0, 0, 0.2);
 }
       main { max-width: 100%; margin: 50px 0; padding: 0 40px; }
       h1 { font-size: 3em; margin-bottom: 10px; }
