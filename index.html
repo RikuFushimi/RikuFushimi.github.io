@@ -83,6 +83,19 @@
     a { color: #0066cc; }
     ul { padding-left: 25px; line-height: 2; }
 
+    .profile {
+      display: flex;
+      align-items: flex-start;
+      gap: 40px;
+    }
+    .profile-text { flex: 1; }
+    .profile-photo {
+      width: 200px;
+      height: 200px;
+      object-fit: cover;
+      border-radius: 8px;
+    }
+
     @media (max-width: 600px) {
       body { font-size: 16px; }
       nav { padding: 12px 20px; gap: 15px; }
@@ -91,6 +104,8 @@
       main { margin: 30px auto; padding: 0 15px; }
       h1 { font-size: 1.6em; }
       h2 { font-size: 1.2em; }
+      .profile { flex-direction: column; }
+      .profile-photo { width: 150px; height: 150px; }
     }
   </style>
 </head>
@@ -101,14 +116,19 @@
     <a href="talks.html">Talks</a>
   </nav>
   <main>
-    <h1>Riku Fushimi</h1>
-    <p>I am Riku Fushimi (伏見 陸 in Japanese),
-      a master's student at <a href="https://www.math.nagoya-u.ac.jp/en/index.html">Nagoya University</a>.<br>
-      My supervisor is Akira Ishii (and my undergraduate supervisor was Hiroyuki Nakaoka).</p>
-    <ul>
-      <li><a href="https://arxiv.org/search/math?searchtype=author&query=Fushimi,+R">arXiv</a></li>
-      <li><a href="https://scholar.google.com/citations?user=P2c5z2UAAAAJ&hl=ja">Google Scholar</a></li>
-    </ul>
+    <div class="profile">
+      <div class="profile-text">
+        <h1>Riku Fushimi</h1>
+        <p>I am Riku Fushimi (伏見 陸 in Japanese),
+          a master's student at <a href="https://www.math.nagoya-u.ac.jp/en/index.html">Nagoya University</a>.<br>
+          My supervisor is Akira Ishii (and my undergraduate supervisor was Hiroyuki Nakaoka).</p>
+        <ul>
+          <li><a href="https://arxiv.org/search/math?searchtype=author&query=Fushimi,+R">arXiv</a></li>
+          <li><a href="https://scholar.google.com/citations?user=P2c5z2UAAAAJ&hl=ja">Google Scholar</a></li>
+        </ul>
+      </div>
+      <img class="profile-photo" src="IMG_5079%20(1).jpg" alt="Riku Fushimi">
+    </div>
     <h2>Research Interests</h2>
     <ul>
       <li>Representation theory of algebras</li>
