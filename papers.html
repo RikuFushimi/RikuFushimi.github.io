@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="ja">
+<html lang="en">
 <head>
   <!-- Google tag (gtag.js) -->
   <script async src="https://www.googletagmanager.com/gtag/js?id=G-YG20MDP7N6"></script>
@@ -72,18 +72,41 @@
     }
 
     nav .name:active {
-      top: 6px; 
+      top: 6px;
     }
 
     main { max-width: 100%; margin: 50px 0; padding: 0 40px; }
     h1 { font-size: 2em; margin-bottom: 15px; }
-    h2 { font-size: 1.5em; margin-top: 40px; margin-bottom: 20px; }
+    h2 { font-size: 1.5em; margin-top: 20px; margin-bottom: 10px; }
+
+    .controls {
+      margin-bottom: 16px;
+    }
+
+    .sort-btn {
+      font-family: 'Nunito', sans-serif;
+      font-size: 0.85em;
+      font-weight: bold;
+      padding: 3px 12px;
+      border: 1.5px solid #888;
+      border-radius: 4px;
+      background: transparent;
+      color: #555;
+      cursor: pointer;
+      transition: all 0.1s ease;
+    }
+
+    .sort-btn:hover {
+      background: #555;
+      color: white;
+    }
 
     .paper {
-      margin-bottom: 30px;
-      padding-bottom: 30px;
+      margin-bottom: 14px;
+      padding-bottom: 14px;
       border-bottom: 1px solid #eee;
     }
+
     .paper-title {
       font-size: 1.1em;
       font-weight: bold;
@@ -91,9 +114,8 @@
       text-decoration: none;
     }
     .paper-title:hover { text-decoration: underline; }
-    .paper-info { color: #666; font-size: 0.9em; margin-top: 5px; }
-    .paper-desc { margin-top: 8px; line-height: 1.7; }
-    .intro { margin-bottom: 20px; line-height: 1.8; }
+    .paper-info { color: #666; font-size: 0.9em; margin-top: 2px; }
+    .intro { margin-bottom: 10px; line-height: 1.8; }
 
     .pdf-link {
       display: inline-block;
@@ -111,6 +133,39 @@
     .pdf-link:hover {
       background: #8B0000;
       color: white;
+    }
+
+    .abstract-btn {
+      font-family: 'Nunito', sans-serif;
+      font-size: 0.8em;
+      font-weight: bold;
+      padding: 1px 8px;
+      border: 1.5px solid #aaa;
+      border-radius: 4px;
+      background: transparent;
+      color: #777;
+      cursor: pointer;
+      margin-left: 8px;
+      transition: all 0.15s ease;
+      vertical-align: middle;
+    }
+
+    .abstract-btn:hover {
+      background: #aaa;
+      color: white;
+    }
+
+    .paper-desc {
+      margin-top: 6px;
+      line-height: 1.6;
+      display: none;
+      color: #444;
+      border-left: 3px solid #eee;
+      padding-left: 12px;
+    }
+
+    .paper-desc.open {
+      display: block;
     }
 
     @media (max-width: 600px) {
@@ -140,38 +195,90 @@
 
     <h2>Publications/Preprints</h2>
 
-    <div class="paper">
-      <a class="paper-title" href="https://arxiv.org/abs/2312.17597">The correspondence between silting objects and \(t\)-structures for non-positive dg algebras</a>
-      <p class="paper-info">arXiv preprint, 2023. Link: <a href="https://arxiv.org/abs/2312.17597">arXiv:2312.17597</a>
-        <a class="pdf-link" href="https://arxiv.org/pdf/2312.17597" target="_blank">pdf</a>
-      </p>
-      <p class="paper-desc">We established a one-to-one correspondence between silting objects and algebraic \(t\)-structures in the setting of ST-pairs.</p>
+    <div class="controls">
+      <button class="sort-btn" id="sortBtn" onclick="toggleSort()">↑ Oldest first</button>
     </div>
 
-    <div class="paper">
-      <a class="paper-title" href="https://arxiv.org/abs/2409.08842">Contravariant Koszul duality between non-positive and positive dg algebras</a>
-      <p class="paper-info">arXiv preprint, 2024. Link: <a href="https://arxiv.org/abs/2409.08842">arXiv:2409.08842</a>
-        <a class="pdf-link" href="https://arxiv.org/pdf/2409.08842" target="_blank">pdf</a>
-      </p>
-      <p class="paper-desc">We studied enhanced triangulated category with a simple-minded collection.</p>
-    </div>
+    <div id="paperList">
 
-    <div class="paper">
-      <a class="paper-title" href="https://arxiv.org/abs/2603.18790">Silting theory and derived base change</a>
-      <p class="paper-info">arXiv preprint, 2026. Link: <a href="https://arxiv.org/abs/2603.18790">arXiv:2603.18790</a>
-        <a class="pdf-link" href="https://arxiv.org/pdf/2603.18790" target="_blank">pdf</a>
-      </p>
-      <p class="paper-desc">We showed that silting theory is preserved under derived base change between complete local noetherian rings with the same residue field.</p>
-    </div>
+      <div class="paper" data-year="2026" data-month="6">
+        <a class="paper-title" href="https://arxiv.org/abs/2606.15274">A classification of derived-discrete graded algebras</a>
+        <p class="paper-info">
+          arXiv preprint, 2026. Link: <a href="https://arxiv.org/abs/2606.15274">arXiv:2606.15274</a>
+          <a class="pdf-link" href="https://arxiv.org/pdf/2606.15274" target="_blank">pdf</a>
+          <button class="abstract-btn" onclick="toggleAbstract(this)">abstract</button>
+        </p>
+        <p class="paper-desc">We classified derived-discrete graded algebras.</p>
+      </div>
 
-    <div class="paper">
-      <a class="paper-title" href="https://arxiv.org/abs/2605.23704">Silting-discrete graded path algebras</a>
-      <p class="paper-info">arXiv preprint, 2026. Link: <a href="https://arxiv.org/abs/2605.23704">arXiv:2605.23704</a>
-        <a class="pdf-link" href="https://arxiv.org/pdf/2605.23704" target="_blank">pdf</a>
-      </p>
-      <p class="paper-desc">We classified silting-discrete graded path algebras.</p>
-    </div>
+      <div class="paper" data-year="2026" data-month="5">
+        <a class="paper-title" href="https://arxiv.org/abs/2605.23704">Silting-discrete graded path algebras</a>
+        <p class="paper-info">
+          arXiv preprint, 2026. Link: <a href="https://arxiv.org/abs/2605.23704">arXiv:2605.23704</a>
+          <a class="pdf-link" href="https://arxiv.org/pdf/2605.23704" target="_blank">pdf</a>
+          <button class="abstract-btn" onclick="toggleAbstract(this)">abstract</button>
+        </p>
+        <p class="paper-desc">We classified silting-discrete graded path algebras.</p>
+      </div>
 
+      <div class="paper" data-year="2026" data-month="3">
+        <a class="paper-title" href="https://arxiv.org/abs/2603.18790">Silting theory and derived base change</a>
+        <p class="paper-info">
+          arXiv preprint, 2026. Link: <a href="https://arxiv.org/abs/2603.18790">arXiv:2603.18790</a>
+          <a class="pdf-link" href="https://arxiv.org/pdf/2603.18790" target="_blank">pdf</a>
+          <button class="abstract-btn" onclick="toggleAbstract(this)">abstract</button>
+        </p>
+        <p class="paper-desc">We showed that silting theory is preserved under derived base change between complete local noetherian rings with the same residue field.</p>
+      </div>
+
+      <div class="paper" data-year="2024" data-month="9">
+        <a class="paper-title" href="https://arxiv.org/abs/2409.08842">Contravariant Koszul duality between non-positive and positive dg algebras</a>
+        <p class="paper-info">
+          arXiv preprint, 2024. Link: <a href="https://arxiv.org/abs/2409.08842">arXiv:2409.08842</a>
+          <a class="pdf-link" href="https://arxiv.org/pdf/2409.08842" target="_blank">pdf</a>
+          <button class="abstract-btn" onclick="toggleAbstract(this)">abstract</button>
+        </p>
+        <p class="paper-desc">We studied enhanced triangulated category with a simple-minded collection.</p>
+      </div>
+
+      <div class="paper" data-year="2023" data-month="12">
+        <a class="paper-title" href="https://arxiv.org/abs/2312.17597">The correspondence between silting objects and \(t\)-structures for non-positive dg algebras</a>
+        <p class="paper-info">
+          arXiv preprint, 2023. Link: <a href="https://arxiv.org/abs/2312.17597">arXiv:2312.17597</a>
+          <a class="pdf-link" href="https://arxiv.org/pdf/2312.17597" target="_blank">pdf</a>
+          <button class="abstract-btn" onclick="toggleAbstract(this)">abstract</button>
+        </p>
+        <p class="paper-desc">We established a one-to-one correspondence between silting objects and algebraic \(t\)-structures in the setting of ST-pairs.</p>
+      </div>
+
+    </div>
   </main>
+
+  <script>
+    let newestFirst = true;
+
+    function toggleAbstract(btn) {
+      const desc = btn.closest('.paper-info').nextElementSibling;
+      desc.classList.toggle('open');
+      btn.textContent = desc.classList.contains('open') ? 'close' : 'abstract';
+    }
+
+    function toggleSort() {
+      newestFirst = !newestFirst;
+      const btn = document.getElementById('sortBtn');
+      btn.textContent = newestFirst ? '↑ Oldest first' : '↓ Newest first';
+
+      const list = document.getElementById('paperList');
+      const papers = Array.from(list.querySelectorAll('.paper'));
+      papers.sort((a, b) => {
+        const ya = parseInt(a.dataset.year) * 100 + parseInt(a.dataset.month);
+        const yb = parseInt(b.dataset.year) * 100 + parseInt(b.dataset.month);
+        return newestFirst ? yb - ya : ya - yb;
+      });
+      papers.forEach(p => list.appendChild(p));
+
+      if (typeof MathJax !== 'undefined') MathJax.typesetPromise();
+    }
+  </script>
 </body>
 </html>
