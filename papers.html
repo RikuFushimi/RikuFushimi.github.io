@@ -211,29 +211,31 @@
       <a href="https://arxiv.org/search/math?searchtype=author&query=Fushimi%2C+R">arXiv</a>
     </p>
 
-    <h2>Publications/Preprints</h2>
+    <h2>Published</h2>
+
+    <div id="publishedList">
+      <div class="paper" data-year="2026" data-month="8">
+              <a class="paper-title" href="https://doi.org/10.1016/j.jalgebra.2026.08.011" target="_blank">The correspondence between silting objects and \(t\)-structures for non-positive dg algebras</a>
+              <p class="paper-info">
+                Published in <em>Journal of Algebra</em>, 2026.
+                <a href="https://doi.org/10.1016/j.jalgebra.2026.08.011" target="_blank">DOI: 10.1016/j.jalgebra.2026.08.011</a>
+                <a class="pdf-link" href="https://authors.elsevier.com/a/1nks74%7EFPQ75W" target="_blank">free access</a>
+                <a class="pdf-link" href="https://arxiv.org/abs/2312.17597" target="_blank">arXiv</a>
+                <a class="pdf-link" href="https://arxiv.org/pdf/2312.17597" target="_blank">pdf</a>
+                <button class="abstract-btn" onclick="toggleAbstract(this)">abstract</button>
+              </p>
+              <p class="paper-desc">We establish a bijective correspondence between basic silting objects of \(\operatorname{per} A\), simple-minded collections of \(D_{\mathrm{fd}}(A)\), algebraic \(t\)-structures on \(D_{\mathrm{fd}}(A)\), and bounded co-\(t\)-structures on \(\operatorname{per} A\), for any locally finite non-positive dg algebra \(A\) over a field. More generally, we prove this correspondence in the abstract setting of ST-pairs inside an algebraic triangulated category, simultaneously generalizing the previously known cases where \(A\) is proper or homologically smooth with finite-dimensional zeroth cohomology.</p>
+            </div>
+    </div>
+
+    <h2>Preprints</h2>
 
     <div class="controls">
       <button class="sort-btn" id="sortBtn" onclick="toggleSort()">↑ Oldest first</button>
     </div>
 
-    <div id="paperList">
-
-      <div class="paper" data-year="2026" data-month="8">
-        <a class="paper-title" href="https://doi.org/10.1016/j.jalgebra.2026.08.011" target="_blank">The correspondence between silting objects and \(t\)-structures for non-positive dg algebras</a>
-        <p class="paper-info">
-          Published in <em>Journal of Algebra</em>, 2026.
-          <a href="https://doi.org/10.1016/j.jalgebra.2026.08.011" target="_blank">DOI: 10.1016/j.jalgebra.2026.08.011</a>
-          <a class="pdf-link" href="https://authors.elsevier.com/a/1nks74%7EFPQ75W" target="_blank">free access</a>
-          <a class="pdf-link" href="https://arxiv.org/abs/2312.17597" target="_blank">arXiv</a>
-          <a class="pdf-link" href="https://arxiv.org/pdf/2312.17597" target="_blank">pdf</a>
-          <button class="abstract-btn" onclick="toggleAbstract(this)">abstract</button>
-        </p>
-        <p class="paper-desc">We establish a bijective correspondence between basic silting objects of \(\operatorname{per} A\), simple-minded collections of \(D_{\mathrm{fd}}(A)\), algebraic \(t\)-structures on \(D_{\mathrm{fd}}(A)\), and bounded co-\(t\)-structures on \(\operatorname{per} A\), for any locally finite non-positive dg algebra \(A\) over a field. More generally, we prove this correspondence in the abstract setting of ST-pairs inside an algebraic triangulated category, simultaneously generalizing the previously known cases where \(A\) is proper or homologically smooth with finite-dimensional zeroth cohomology.</p>
-      </div>
-
-
-      <div class="paper" data-year="2026" data-month="6">
+    <div id="preprintList">
+<div class="paper" data-year="2026" data-month="6">
         <a class="paper-title" href="https://arxiv.org/abs/2606.15274">A classification of derived-discrete graded algebras</a><span class="coauthor">(with <a href="https://sites.google.com/view/xingbohan/homepage" target="_blank">Bohan Xing</a>)</span>
         <p class="paper-info">
           arXiv preprint, 2026. Link: <a href="https://arxiv.org/abs/2606.15274">arXiv:2606.15274</a>
@@ -289,7 +291,7 @@
       const btn = document.getElementById('sortBtn');
       btn.textContent = newestFirst ? '↑ Oldest first' : '↓ Newest first';
 
-      const list = document.getElementById('paperList');
+      const list = document.getElementById('preprintList');
       const papers = Array.from(list.querySelectorAll('.paper'));
       papers.sort((a, b) => {
         const ya = parseInt(a.dataset.year) * 100 + parseInt(a.dataset.month);
