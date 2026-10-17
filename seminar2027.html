@@ -12,7 +12,7 @@
       margin: 0;
       background: #fff;
       color: #24292f;
-      font-family: -apple-system, BlinkMacSystemFont, "Hiragino Kaku Gothic ProN", "Hiragino Sans", "Yu Gothic", Meiryo, sans-serif;
+      font-family: -apple-system, BlinkMacSystemFont, "Hiragino Kaku Gothic ProN", "Hiragino Sans", Meiryo, "Yu Gothic", sans-serif;
       font-size: 15px;
       line-height: 1.9;
     }
@@ -41,6 +41,10 @@
     a:not(.button) { color: #27598a; text-underline-offset: 3px; }
     .organizers { margin-bottom: 0; }
     footer { margin-top: 46px; padding-top: 18px; border-top: 1px solid #d8dee4; color: #747c84; font-size: 12px; }
+    @media (min-width: 521px) {
+      body { font-size: 16px; }
+      .note { font-size: 14px; }
+    }
     @media (max-width: 520px) {
       main { padding: 45px 21px 36px; }
       section { margin-top: 33px; }
