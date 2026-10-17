@@ -51,6 +51,8 @@
       footer { font-size: 14px; }
     }
     @media (max-width: 520px) {
+      h1 { font-size: clamp(20px, 6.8vw, 28px); }
+      h1 .seminar-title { display: block; white-space: nowrap; }
       main { padding: 45px 21px 36px; }
       section { margin-top: 33px; }
       .detail { grid-template-columns: 83px 1fr; gap: 10px; }
@@ -60,7 +62,7 @@
 <body>
   <main>
     <header>
-      <h1>第2回 環論表現論若手セミナー</h1>
+      <h1>第2回 <span class="seminar-title">環論表現論若手セミナー</span></h1>
     </header>
 
     <section aria-labelledby="overview">
