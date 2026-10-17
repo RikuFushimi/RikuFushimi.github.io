@@ -1,87 +1,147 @@
-<!doctype html>
-<html lang="ja">
+<!DOCTYPE html>
+<html lang="en">
 <head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="description" content="第2回環論表現論若手セミナー。2027年2月末、信州大学松本キャンパスにて開催。参加登録受付中。">
-  <title>第2回環論表現論若手セミナー</title>
+  <!-- Google tag (gtag.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-YG20MDP7N6"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-YG20MDP7N6');
+  </script>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="canonical" href="https://rikufushimi.github.io/">
+  <meta name="description" content="Riku Fushimi (伏見 陸) - Graduate student at Nagoya University. Research interests: representation theory, triangulated categories.">
+  <meta name="keywords" content="Riku Fushimi, 伏見 陸, Nagoya University, mathematics, representation theory">
+  <title>Riku Fushimi | Mathematics | Nagoya University</title>
+  <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;700&display=swap" rel="stylesheet">
   <style>
-    :root { color-scheme: light; }
-    * { box-sizing: border-box; }
-    body {
-      margin: 0;
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    body { font-family: 'Nunito', sans-serif; font-size: 20px; color: #333; }
+
+    nav {
       background: #fff;
-      color: #24292f;
-      font-family: -apple-system, BlinkMacSystemFont, "Hiragino Kaku Gothic ProN", "Hiragino Sans", "Yu Gothic", Meiryo, sans-serif;
-      font-size: 15px;
-      line-height: 1.9;
+      padding: 20px 40px;
+      display: flex;
+      gap: 45px;
+      align-items: center;
+      border-bottom: 2px solid black;
     }
-    main { max-width: 760px; margin: 0 auto; padding: 72px 28px 56px; }
-    h1, h2, p, dl { margin-top: 0; }
-    h1 { margin-bottom: 22px; font-size: clamp(28px, 5.5vw, 39px); line-height: 1.5; letter-spacing: .02em; }
-    h2 { font-size: 18px; margin-bottom: 16px; }
-    p { margin-bottom: 14px; }
-    section { border-top: 1px solid #d8dee4; padding-top: 30px; margin-top: 42px; }
-    dl { margin-bottom: 0; }
-    .detail { display: grid; grid-template-columns: 105px 1fr; gap: 16px; padding: 11px 0; }
-    dt { color: #626b73; }
-    dd { margin: 0; }
-    .note { display: block; color: #687077; font-size: 13px; }
-    .button {
-      display: inline-block;
-      margin: 8px 0 14px;
-      padding: 9px 23px;
-      border-radius: 4px;
-      background: #263c55;
-      color: #fff;
-      font-weight: 600;
+
+    nav a {
+      color: #c86010;
       text-decoration: none;
+      font-size: 30px;
+      padding: 1px 7px;
+      border: 1.5px solid #c86010;
+      border-radius: 4px;
+      font-weight: bold;
+      transition: all 0.1s ease;
+      vertical-align: middle;
+      background: transparent;
+      position: relative;
+      top: 0;
     }
-    .button:hover, .button:focus-visible { background: #405d7d; }
-    a:not(.button) { color: #27598a; text-underline-offset: 3px; }
-    .organizers { margin-bottom: 0; }
-    footer { margin-top: 46px; padding-top: 18px; border-top: 1px solid #d8dee4; color: #747c84; font-size: 12px; }
-    @media (max-width: 520px) {
-      main { padding: 45px 21px 36px; }
-      section { margin-top: 33px; }
-      .detail { grid-template-columns: 83px 1fr; gap: 10px; }
+
+    nav a:hover {
+      background: #c86010;
+      color: white;
+    }
+
+    nav a:active {
+      top: 6px;
+    }
+
+    nav .name {
+      font-weight: bold;
+      margin-right: auto;
+      color: #333;
+      background: #fde8cc;
+      padding: 6px 22px;
+      border-radius: 10px;
+      cursor: pointer;
+      text-decoration: none;
+      font-size: 45px;
+      border: none;
+      transition: all 0.1s ease;
+      position: relative;
+      top: 0;
+    }
+
+    nav .name:hover {
+      background: #f5c99a;
+      color: #333;
+    }
+
+    nav .name:active {
+      top: 6px;
+    }
+
+    main { max-width: 100%; margin: 50px 0; padding: 0 40px; }
+    h1 { font-size: 3em; margin-bottom: 10px; }
+    h2 { margin-top: 40px; margin-bottom: 10px; border-bottom: 1px solid #ccc; padding-bottom: 5px; }
+    p { line-height: 1.8; margin-bottom: 10px; }
+    a { color: #0066cc; }
+    ul { padding-left: 25px; line-height: 2; }
+
+    .profile {
+      display: flex;
+      align-items: flex-start;
+      gap: 40px;
+    }
+    .profile-text { flex: 1; }
+    .profile-photo {
+      width: 200px;
+      height: 200px;
+      object-fit: cover;
+      border-radius: 8px;
+    }
+
+    @media (max-width: 600px) {
+      body { font-size: 16px; }
+      nav { padding: 12px 20px; gap: 15px; }
+      nav a { font-size: 14px; }
+      nav .name { font-size: 21px; padding: 3px 12px; }
+      main { margin: 30px auto; padding: 0 15px; }
+      h1 { font-size: 1.6em; }
+      h2 { font-size: 1.2em; }
+      .profile { flex-direction: column; }
+      .profile-photo { width: 150px; height: 150px; }
     }
   </style>
 </head>
 <body>
+  <nav>
+    <a class="name" href="index.html">Riku Fushimi</a>
+    <a href="papers.html">Papers</a>
+    <a href="talks.html">Talks</a>
+  </nav>
   <main>
-    <header>
-      <h1>第2回 環論表現論若手セミナー</h1>
-    </header>
-
-    <section aria-labelledby="overview">
-      <h2 id="overview">開催概要</h2>
-      <dl>
-        <div class="detail"><dt>日程</dt><dd>2027年2月28日（日）～3月1日（月）<span class="note">3月2日（火）は予備日。日程は最終確認中です。</span></dd></div>
-        <div class="detail"><dt>会場</dt><dd>信州大学 松本キャンパス<br>理学部講義棟1階 第一講義室</dd></div>
-        <div class="detail"><dt>開催形式</dt><dd>対面</dd></div>
-        <div class="detail"><dt>講演</dt><dd>環論・表現論分野のサーベイ発表・研究発表<span class="note">講演者は常勤の職に就いていない方に限ります。聴講はどなたでも可能です。</span></dd></div>
-      </dl>
-    </section>
-
-    <section aria-labelledby="registration">
-      <h2 id="registration">参加登録</h2>
-      <p>講演希望の有無にかかわらず、参加される方は以下のフォームからお申し込みください。</p>
-      <a class="button" href="https://docs.google.com/forms/d/e/1FAIpQLSd4T48v5clEWNdFW8yMQftGcDQ2T5BSRfqzs2nCmDjavqT5ug/viewform?usp=send_form" target="_blank" rel="noopener noreferrer">参加登録フォーム ↗</a>
-      <p class="note">講演希望者の締切：2026年11月30日（月）<br>聴講のみの方の締切：後日お知らせします。</p>
-    </section>
-
-    <section aria-labelledby="program">
-      <h2 id="program">プログラム</h2>
-      <p>決定次第、こちらに掲載します。</p>
-    </section>
-
-    <section aria-labelledby="committee">
-      <h2 id="committee">世話人</h2>
-      <p class="organizers">大塩 智也（信州大学）<br>伏見 陸（名古屋大学）<br>柳下 陸（東京大学）</p>
-    </section>
-
-    <footer><a href="https://sites.google.com/view/ringrepbeginner/%E3%83%9B%E3%83%BC%E3%83%A0" target="_blank" rel="noopener noreferrer">第1回のホームページ ↗</a></footer>
+    <div class="profile">
+      <div class="profile-text">
+        <h1>Riku Fushimi</h1>
+        <p>I am Riku Fushimi (伏見 陸 in Japanese),
+          a&nbsp;master's student at <a href="https://www.math.nagoya-u.ac.jp/en/index.html">Nagoya University</a>.<br>
+          My supervisor is Akira Ishii (and my undergraduate supervisor was Hiroyuki Nakaoka).</p>
+        <ul>
+          <li><a href="https://arxiv.org/search/math?searchtype=author&query=Fushimi,+R">arXiv</a></li>
+          <li><a href="https://scholar.google.com/citations?user=P2c5z2UAAAAJ&hl=ja">Google Scholar</a></li>
+        </ul>
+      </div>
+      <img class="profile-photo" src="IMG_5079%20(1).jpg" alt="Riku Fushimi">
+    </div>
+    <h2>Research Interests</h2>
+    <ul>
+      <li>Representation theory of algebras</li>
+      <li>Triangulated categories</li>
+      <li>DG algebras / categories</li>
+      <li>Silting theory</li>
+      <li>Cluster categories</li>
+      <li>Noncommutative crepant resolutions</li>
+    </ul>
+    <h2>Contact</h2>
+    <p>Email: fushimi.riku.h9 [at] s.mail.nagoya-u.ac.jp</p>
   </main>
 </body>
 </html>
